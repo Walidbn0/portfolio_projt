@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <title>Shopping Cart Example</title>
+    
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./css/price.css">
+  </head>
+  <body>
+ <div class="heading">
+   <h1>Pricing Plans</h1>
+ </div>
+ <!-- <br> -->
+    
+ <main>
+    <div class="container"> 
+   <div id="alerts"></div>
+<div class="productcont">
+        <div class="product">
+            <h3 class="productname">Basic Plan</h3>
+            <p>Strategy & Research Business & Finance Analysing SEO Optimization</p>
+            <p class="price">1500$</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+            <h3 class="productname">Standard Plan</h3>
+            <p>Strategy & Research Business & Finance Analysing SEO Optimization</p>
+            <p class="price">2000$</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+            <h3 class="productname">Premium Plan</h3>
+            <p>Strategy & Research Business & Finance Analysing SEO Optimization</p>
+            <p class="price">5000$</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        </div>
+        <div class="cart-container">
+          <h2>Cart</h2>
+          <table>
+            <thead>
+              <tr>
+              <th><strong>Product</strong></th>
+              <th><strong>Price</strong></th>
+            </tr>
+            </thead>
+            <tbody id="carttable">
+            </tbody>
+          </table>
+          <hr>
+          <table id="carttotals">
+            <tr>
+              <td><strong>Items</strong></td>
+              <td><strong>Total</strong></td>
+            </tr>
+            <tr>
+              <td>x <span id="itemsquantity">0</span></td>
+             
+              <td>$<span id="total">0</span></td>
+            </tr></table>
+
+            
+          <div class="cart-buttons">  
+            <button id="emptycart">Empty Cart</button>
+            <button id="checkout"  onclick= "window.location.href='./converter.html'">Convert</button>
+            <button id="rzp-button1">Checkout</button>
+          </div>
+        </div>
+</div>
+ </main>
+ <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script  src="./js/price.js"></script> 
+  </body>
+</html>
