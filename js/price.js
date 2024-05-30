@@ -1,6 +1,5 @@
 /* get cart total from session on load */
 updateCartTotal();
-
 /* button event listeners */
 document.getElementById("emptycart").addEventListener("click", emptyCart);
 var btns = document.getElementsByClassName('addtocart');
@@ -43,50 +42,21 @@ function addToCart(elem) {
         //cart to JSON
         stringCart = JSON.stringify(cart);
         //create session storage cart item
-        sessionStorage.setItem('cart', stringCart);
-        addedToCart(getproductName);
-        updateCartTotal();
-    }
-    else {
-        //get existing cart data from storage and convert back into array
-       cart = JSON.parse(sessionStorage.getItem('cart'));
-        //append new product JSON object
-        cart.push(stringProduct);
-        //cart back to JSON
-        stringCart = JSON.stringify(cart);
-        //overwrite cart data in sessionstorage 
-        sessionStorage.setItem('cart', stringCart);
-        addedToCart(getproductName);
-        updateCartTotal();
-    }
-}
 /* Calculate Cart Total */
-function updateCartTotal(){
-    //init
-    var total = 0;
     var price = 0;
-    var items = 0;
-    var productname = "";
     var carttable = "";
-    if(sessionStorage.getItem('cart')) {
-        //get cart data & parse to array
         var cart = JSON.parse(sessionStorage.getItem('cart'));
         //get no of items in cart 
-        items = cart.length;
         //loop over cart array
         for (var i = 0; i < items; i++){
-            //convert each JSON product in array back into object
             var x = JSON.parse(cart[i]);
             //get property value of price
-            price = parseFloat(x.price.split('₹')[1]);
             productname = x.productname;
             //add price to total
-            carttable += "<tr><td>" + productname + "</td><td>₹" + price.toFixed(2) + "</td></tr>";
             total += price;
         }
         
     }
-    //update total on website HTML
     document.getElementById("total").innerHTML = total.toFixed(2);
     //insert saved products to cart table
     document.getElementById("carttable").innerHTML = carttable;
@@ -156,4 +126,33 @@ rzp1.on('payment.failed', function (response){
 document.getElementById('rzp-button1').onclick = function(e){
     rzp1.open();
     e.preventDefault();
+}    //update total on website HTML
+            carttable += "<tr><td>" + productname + "</td><td>$" + price.toFixed(2) + "</td></tr>";
+            price = parseFloat(x.price.split('$')[1]);
+            //convert each JSON product in array back into object
+        items = cart.length;
+        //get cart data & parse to array
+    if(sessionStorage.getItem('cart')) {
+    var productname = "";
+    var items = 0;
+    var total = 0;
+function updateCartTotal(){
+    //init
+    }
 }
+        sessionStorage.setItem('cart', stringCart);
+        updateCartTotal();
+        addedToCart(getproductName);
+        addedToCart(getproductName);
+        sessionStorage.setItem('cart', stringCart);
+        //overwrite cart data in sessionstorage 
+        updateCartTotal();
+    }
+    else {
+        stringCart = JSON.stringify(cart);
+        //get existing cart data from storage and convert back into array
+       cart = JSON.parse(sessionStorage.getItem('cart'));
+        //cart back to JSON
+        //append new product JSON object
+        cart.push(stringProduct);
+

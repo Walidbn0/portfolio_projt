@@ -55,4 +55,43 @@
 						</select>
 					</div>
 				</div>
+				<div class="col-sm-6">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text">To</span>
+						</div>
+						<select class="form-control to" id="sel2">
+							<option value="">Select One …</option>
+							<option value="USD">USD</option>
+							<option value="AUD">AUD</option>
+							<option value="CAD">CAD</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="text-center">
+				<button class="btn btn-primary convert m-2"
+						type="submit">
+					Convert
+				</button>
+				<button class="btn btn-primary m-2"
+						onclick="clearVal()">
+				Reset
+			</button>
+			</div>
+		</div>
+		<div id="finalAmount" class="text-center">
+
+			<!-- Display the converted amount -->
+			<h2>Total Amount :
+				<span class="finalValue"
+					>
+		</span>
+			</h2>
+		</div>
+	</div>
+	<script type="module" src="./js/converter.js"></script>
+</body>
+</html>
 

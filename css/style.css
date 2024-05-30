@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;800&display=swap');
+
+rt url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;800&display=swap');
 
 :root{
   --black:#192a56;
@@ -41,7 +42,7 @@ section{
 
 .btn:hover{
   background:var(--yellow);
-  color:#fff;
+  color:#cc2020;
 }
 
 .heading{
@@ -52,70 +53,50 @@ section{
   font-size: 4.5rem;
 }
 
-header{
-  position: fixed;
-  top:0; left:0;
-  width:100%;
-  z-index: 100%;
-  display: flex;
   align-items: center;
-  justify-content: space-between;
   padding:2rem 7%;
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-  background:#fff;
-  z-index: 1000;
 }
 
-header .logo{
   font-size: 2.5rem;
-  color:#666;
+  color:#131212;
   font-weight: bolder;
 }
 
-header .navbar a{
-  font-size: 2rem;
-  margin-left: 2.5rem;
-  color:var(--black);
-}
-
-header .navbar a:hover{
   color:var(--orange);
 }
-
 #menu-bar{
   font-size: 3rem;
   color:var(--black);
-  cursor: pointer;
   display: none;
 }
 
 .home{
   display: flex;
   align-items: center;
-  background:url(../images/home-bg.jpg) no-repeat;
+  background:url(../images/digitalmarketing.jpeg) no-repeat;
   background-size: cover;
   background-position: center;
   flex-wrap: wrap;
 }
 
 .home .image{
-  padding-top: 4rem;
-  flex:1 1 40rem;
+  padding-top: 5rem;
+  flex:1 1 75rem;
 }
 
 .home .content{
   padding:1rem;
-  flex:1 1 40rem;
+  flex:1 1 75rem;
 }
 
 .home .content h3{
-  color:#fff;
-  font-size: 5.5rem;
+  color:#080808;
+  font-size: 3rem;
   text-transform: uppercase;
 }
 
 .home .content p{
-  color:#fff;
+  color:#1a1818;
   font-size: 1.7rem;
 }
 
@@ -124,14 +105,14 @@ header .navbar a:hover{
 }
 
 .home .content .btn{
-  color:#444;
-  background:#fff;
+  color:#a39d9d;
+  background:#fdfdfd;
 }
 
 .home .content .btn:hover{
-  color:#fff;
+  color:#836a6a;
   background:none;
-  border-color: #fff;
+  border-color: #0099ff;
 }
 
 .feature .box-container{
@@ -186,7 +167,7 @@ header .navbar a:hover{
 
 .service .box-container .box h3{
   font-size: 2.5rem;
-  color:#fff;
+  color:#ee520a;
   padding:1rem 0;
 }
 
@@ -217,7 +198,7 @@ header .navbar a:hover{
 
 .project .box-container .box{
   margin:1rem;
-  border:.1rem solid rgba(0,0,0,.2);
+  border:.1rem solid rgba(12, 12, 12, 0.2);
   overflow: hidden;
   height: 25rem;
   flex:1 1 30rem;
@@ -552,4 +533,24 @@ header .navbar a:hover{
     width:100%;
   }
 
+}  cursor: pointer;
+
+header .navbar a:hover{
 }
+header .navbar a{
+  margin-left: 2.5rem;
+  color:var(--black);
+  font-size: 2rem;
+
+header .logo{
+  background:#47f1e9;
+  z-index: 1000;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  justify-content: space-between;
+header{
+  position: fixed;
+  display: flex;
+  z-index: 100%;
+  top:0; left:0;
+  width:100%;
+
